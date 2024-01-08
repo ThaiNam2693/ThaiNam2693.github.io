@@ -1,0 +1,131 @@
+.header {
+
+    nav {
+        padding: 30px 6.5%;
+        padding: max-content;
+        gap: 1%
+    }
+
+    &__logo {
+        height: 38px;
+
+        img {
+            width: 40px;
+            height: 38px;
+        }
+    }
+
+    &__toggle {
+        padding-left: 85%;
+
+        >span {
+            display: block;
+            margin: 3px;
+            width: 18px;
+            height: 4px;
+            background-color: #182327;
+        }
+    }
+
+    &__function {
+        min-width: 400px;
+        gap: 2%;
+
+        div {
+            min-width: 230px;
+            text-align: right;
+
+            input {
+                margin: 0px;
+                height: 52px;
+                border-radius: 8px;
+                line-height: 24px;
+                background-image: url('/Images/search.svg');
+                background-position: 10px 14px;
+                background-repeat: no-repeat;
+                padding-left: 40px;
+                width: 100%;
+            }
+        }
+
+        &__user {
+            text-align: center;
+            align-content: center;
+            height: 52px;
+        }
+    }
+
+    &__banner {
+        background: linear-gradient(180deg, #02B5EA 0%, rgba(2, 181, 234, 0.15) 100%);
+        padding: 20px 1% 20px 6.5%;
+        height: fit-content;
+        width: 100%;
+        margin: 0px 0px;
+
+        &__text {
+
+            h1 {
+                display: block;
+                font-family: Sentient;
+                font-size: 7vh;
+                font-weight: 700;
+                line-height: 8vh;
+                margin: 50px 0px;
+
+                span {
+                    text-align: justify;
+                }
+            }
+
+            p {
+                display: block;
+                font-size: 2vh;
+                font-style: normal;
+                line-height: 32px;
+                margin: 10% 0px;
+            }
+
+            a {
+                display: block;
+                margin: 10% 0px;
+            }
+        }
+
+        &__show {
+            text-align: right;
+            position: relative;
+
+            img {
+                position: relative;
+                width: 85%;
+                height: auto;
+                z-index: 1;
+            }
+
+            &__circle {
+                position: absolute;
+                top: 0%;
+                right: 0%;
+                opacity: 0.5;
+                z-index: 0;
+            }
+        }
+    }
+
+    @include breakpoints-down(large) {
+
+        &__banner {
+            flex-direction: column-reverse;
+            padding: 0px;
+
+            &__text {
+                width: 100%;
+                padding-left: 5%;
+            }
+
+            &__show {
+                width: 100%;
+            }
+        }
+    }
+}
